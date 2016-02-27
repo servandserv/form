@@ -51,8 +51,8 @@ if(!isset($_POST["input-1"])||!$_POST["input-1"]) {
     <body>
         <h1>Ok!</h1>
 <?php
-    echo "<p>You have set 'Name' as ".$_SESSION["input-1"]."</p>";
-    echo "<p>You have set 'Value' as ".$_SESSION["input-2"]."</p>";
+    echo "<p>You have set 'Name' as '".$_SESSION["input-1"]."'</p>";
+    echo "<p>You have set 'Value' as '".($_SESSION["input-2"]?$_SESSION["input-2"]:'empty')."'</p>";
     echo "<p><a href='index.php?reset=1' target='_parent'>go to the new one</a></p>";
     unset($_SESSION["input-1"]);
     unset($_SESSION["input-2"]);

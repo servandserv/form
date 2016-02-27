@@ -27,7 +27,7 @@
                 <h1>Framed form control flow<br/><small>(no js)</small></h1>
                 <form method="POST" action="controller.php" target="iframe">
                     <div>
-                        <label for="input-1">Name</label>
+                        <label for="input-1">Name<sup>*</sup></label>
                         <input type="text" id="input-1" name="input-1" value="<?php echo $input1; ?>" placeholder="set name" />
                     </div>
                     <div>
@@ -35,6 +35,7 @@
                         <input type="text" id="input-2" name="input-2" value="<?php echo $input2; ?>" placeholder="choose from the list" readonly="readonly"/>
                         <input type="submit" name="part" value="List" />
                     </div>
+                    <div><sup>*</sup> mandatory fields</div>
                     <div>
                         <input type="submit" name="full" value="Submit" />
                     </div>

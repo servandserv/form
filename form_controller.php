@@ -6,11 +6,14 @@
     else if (isset($_SERVER["REDIRECT_REMOTE_USER"])) $_SESSION[session_name()] = $_SERVER["REDIRECT_REMOTE_USER"] ;
     else $_SESSION[session_name()] = "Unknown";
     
+    // read request headers
+    
+    
+    
+    
+    
     $input1 = isset($_SESSION["input-1"]) ? $_SESSION["input-1"] : "";
     $input2 = isset($_GET["input-2"]) ? $_GET["input-2"] : (isset($_SESSION["input-2"])?$_SESSION["input-2"]:"");
-    if(isset($_GET["input-2"])) {
-        $_SESSION["input-2"] = $_GET["input-2"];
-    }
 ?>
 <!doctype html>
 <html lang="ru">
@@ -22,9 +25,9 @@
     </head>
 
     <body>
+        <h1>Framed form control flow (no js)</h1>
         <div>
             <div>
-                <h1>Framed form control flow<br/><small>(no js)</small></h1>
                 <form method="POST" action="controller.php" target="iframe">
                     <div>
                         <label for="input-1">Name</label>
@@ -32,7 +35,7 @@
                     </div>
                     <div>
                         <label for="input-2">Value</label>
-                        <input type="text" id="input-2" name="input-2" value="<?php echo $input2; ?>" placeholder="choose from the list" readonly="readonly"/>
+                        <input type="text" id="input-2" name="input-2" value="<?php echo $input2; ?>" placeholder="choose from list" />
                         <input type="submit" name="part" value="List" />
                     </div>
                     <div>

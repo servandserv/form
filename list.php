@@ -14,9 +14,8 @@ if(isset($_GET)||$_GET["input-1"]) {
     </head>
 
     <body>
-        <h1>List</h1>
 <?php
-    echo "<p>for - ".$_GET["input-1"]."</p>";
+    echo "<h1>Values for Name - ".$_GET["input-1"]."</h1>";
     echo "<form method='GET' action='index.php' target='_parent'>";
     echo "<ul>";
     $list = array("1","2","3");
@@ -24,7 +23,7 @@ if(isset($_GET)||$_GET["input-1"]) {
         echo "<li><p><input type='radio' name='input-2' value='$li' /><label>$li</label></p></li>";
     }
     echo "</ul>";
-    echo "<input type='submit' value='Set' />";
+    echo "<input type='submit' value='Select' />";
     echo "</form>";
 ?>
 

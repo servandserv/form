@@ -23,7 +23,7 @@ if(!isset($_POST["input-1"])||!$_POST["input-1"]) {
     <body>
         <h1>Errors</h1>
 <?php
-    echo "<p>You have to set 'Name' field!!!</p>";
+    echo "<p>You have to set 'Name' field before.</p>";
     echo "<p><a href='help.html'>Read the help carefully!</a></p>";
 ?>
 
@@ -53,6 +53,7 @@ if(!isset($_POST["input-1"])||!$_POST["input-1"]) {
 <?php
     echo "<p>You have set 'Name' as ".$_SESSION["input-1"]."</p>";
     echo "<p>You have set 'Value' as ".$_SESSION["input-2"]."</p>";
+    echo "<p><a href='index.php?reset=1' target='_parent'>go to the new one</a></p>";
     unset($_SESSION["input-1"]);
     unset($_SESSION["input-2"]);
 }

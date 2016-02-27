@@ -1,0 +1,11 @@
+html,
+body {
+    margin:0,
+    padding:0;
+    font-family: Tahoma;
+    color: rgb(21,21,21);
+}
+
+body {
+    padding: 1rem 1rem 0 2rem;
+}

@@ -3,38 +3,29 @@
     <head>
         <meta charset="utf-8">
         <title>Help</title>
-        <link rel="stylesheet" href="src/css/styles.css" />
-        
+        <link rel="stylesheet" href="src/css/help.styles.css" />
     </head>
 
     <body>
-        <h1>Form filling recomendations</h1>
-        <ul>
+        <h1>Form help</h1>
+        <h2>Sequence diagram</h2>
+        <p><a href="sequence.html" target="_parent">Form flow sequence diagram</a></p>
+        <h2>Tips</h2>
+        <ol>
             <li>
-                <p>Set Name to first field</p>
+                <p>Set 'Name' field;</p>
             </li>
             <li>
-                <p>Click on the List button to get Values list for field. Then choose one of them and submit it.</p>
+                <p>
+                    Set 'Value' field. To set this field you have to click on the 'List' button. 
+                    Choose one then click 'Select' button.
+                </p>
             </li>
-        </ul>
-        <!--script type="text/javascript" src="src/js/iframemediator.js">;</script>
-        <script type="text/javascript">
-            var sc = document.getElementById('child-selection');
-            var iframe1 = window.iframeMediator.createFrame(document.getElementById('iframe1'),{
-                'setSelect': function(args) {
-                    sc.innerHTML = args;
-                    console.log('frame1',args);
-                }
-            }, false);
-            iframe1.init();
-                
-            var iframe2 = window.iframeMediator.createFrame(document.getElementById('iframe2'),{
-                'setSelect': function(args) {
-                    sc.innerHTML = args;
-                    console.log('frame2',args);
-                }
-            }, true);
-            iframe2.init();
-        </script-->
+            <li>
+                <p>
+                    Click on 'Submit' button to send form data.
+                </p>
+            </li>
+        </ol>
     </body>
 </html>

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+projectRoot=$(dirname $(dirname $(dirname $(realpath $0))))
+app="Form"
+
+cd $(realpath $projectRoot/../happymeal)
+
+#build php, js classes & tests
+./happymeal xsd2code -s "${projectRoot}/web/schemas" -o "${projectRoot}" -vjm "Form\\Port\\Adaptor\\Data" ${app}
+
+#cd $(realpath $projectRoot)
+#minify && uglify
+#java -jar ./tools/yuicompressor/yuicompressor-2.4.8.jar --type js ${projectRoot}/src/js/${app}.js > ${projectRoot}/web/js/${app}.min.js
+#chmod 755 ./web/js/${app}.min.js
+#echo "minify js ...                   OK!"

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href="../../stylesheets/Form/Prices.Form.xsl"?>
+<xsd:schema elementFormDefault="qualified"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="urn:com:servandserv:Form:Model"
+	xmlns:atom="urn:com:servandserv:Form:XML:Atom:Link"
+	targetNamespace="urn:com:servandserv:Form:Model">
+
+<xsd:import schemaLocation="../XML/Atom/Link.xsd" namespace="urn:com:servandserv:Form:XML:Atom:Link" /> 
+
+<xsd:element name="Model">
+	<xsd:complexType>
+		<xsd:annotation>
+			<xsd:documentation>Form model example</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+		    <xsd:element name="ID" type="xsd:string" minOccurs="0" />
+			<xsd:element name="product" type="productType" minOccurs="1" />
+			<xsd:element name="price" type="priceType" minOccurs="1" />
+			<xsd:element ref="atom:Link" minOccurs="1" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:simpleType name="priceType">
+    <xsd:restriction base="xsd:int">
+        <xsd:enumeration value="1" />
+        <xsd:enumeration value="2" />
+        <xsd:enumeration value="3" />
+        <xsd:enumeration value="4" />
+    </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="productType">
+    <xsd:restriction base="xsd:string">
+        <xsd:pattern value="^[a-zA-Z]{1,5}$" />
+    </xsd:restriction>
+</xsd:simpleType>
+
+</xsd:schema>

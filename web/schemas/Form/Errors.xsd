@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="urn:com:servandserv:Form:Errors"
+	xmlns:atom="urn:com:servandserv:Form:XML:Atom:Link"
+	targetNamespace="urn:com:servandserv:Form:Errors">
+
+<xsd:import schemaLocation="../XML/Atom/Link.xsd" namespace="urn:com:servandserv:Form:XML:Atom:Link" /> 
+
+<xsd:element name="Errors">
+	<xsd:complexType>
+		<xsd:annotation>
+			<xsd:documentation>Form errors example</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="Error" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element ref="atom:Link" minOccurs="1" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="Error">
+    <xsd:complexType>
+        <xsd:element name="code" type="xsd:integer" />
+        <xsd:element name="ref" type="xsd:string" />
+        <xsd:element name="value" type="xsd:string" />
+    </xsd:complexType>
+</xsd:element>
+
+</xsd:schema>
